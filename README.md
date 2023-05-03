@@ -25,9 +25,9 @@ The original source of the data used is `Big Mart Sales Prediction` from [this l
 
 - Evaluation using Metrics
 
-- Analysis: Based on the metrics, the Optimized Decision Tree Model has the lowest MAE of 738 and RMSE of 1057. The difference between RMSE and MAE implies that the model is making some larger errors as well.
-
-Since the average value of Item_Outlet_Sales column is 2181 and the Mean Average Error on the Test data is about 738 for the optimized Decision Tree Regression model, the model is off by about 33.8 % on average. (TBD)
+- Analysis: 
+    -  Based on the metrics, the Optimized Decision Tree Model has the lowest MAE of 738 and RMSE of 1057. The difference between RMSE and MAE implies that the model is making some larger errors as well.
+    - Since the average value of Item_Outlet_Sales column is 2181 and the Mean Average Error on the Test data is about 738 for the optimized Decision Tree Regression model, the model is off by about 33.8 % on average. (TBD)
 
 ### Recommendations:
 
