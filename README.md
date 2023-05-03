@@ -1,6 +1,6 @@
 # **Prediction of Product Sales**
 
-##Using regression models to predict the sales of food products 
+## Using regression models to predict the sales of food products 
 
 - **Author:** Erica Kitano
 
