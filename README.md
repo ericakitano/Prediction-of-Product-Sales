@@ -16,7 +16,7 @@ The original source of the data used is `Big Mart Sales Prediction` from [this l
 - Data cleaning:
   - checked for duplicates
   - filled in missing values with median value for the numerical column: `Item_Weight` 
-  - filled in missing values with "Unknown' for the categorical column: `Outlet_Size`
+  - filled in missing values with 'Unknown' for the categorical column: `Outlet_Size`
   - fixed inconsistent values in `Item_Fat_Content` column
 - Performed Exploratory Analysis to understand the statistics and correlation of each feature to the target
 - Performed Explanatory Analysis to show the relationship between `Item_MRP` and `Item_Outlet_Sales`
