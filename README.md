@@ -23,7 +23,14 @@ The original source of the data used is `Big Mart Sales Prediction` from [this l
 
 ### Results
 
-(plots)
+Regplot of `Item_MRP` vs `Item_Outlet_Sales`
+![reg_plot_1](https://user-images.githubusercontent.com/127703546/236113302-968bf5a3-ccfc-459b-8336-2424a5044a44.png)
+
+There is a positive correlation between `Item_MRP` and `Item_Outlet_Sales`.
+
+Outlet_Type Count Plot
+![outlet_type](https://user-images.githubusercontent.com/127703546/236113472-7df7a044-4c7e-4189-9ec3-dfe2632a3bc1.png)
+Supermarket Type1 has the highest count.
 
 ### Model
 - Decision Tree Model (TBD)
