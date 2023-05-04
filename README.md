@@ -13,8 +13,13 @@ Help the retailer understand the properties of products and outlets that play cr
 The original source of the data used is `Big Mart Sales Prediction` from [this link](https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii/).
 
 ### Methods
-- Data cleaning such as checking for duplicates, filling in missing values, fixing inconsistent values
-- Perform Exploratory Analysis to understand the statistics and correlation of each feature to the target
+- Data cleaning:
+  - checked for duplicates
+  - filled in missing values with median value for the numerical column: `Item_Weight` 
+  - filled in missing values with "Unknown' for the categorical column: `Outlet_Size`
+  - fixed inconsistent values in `Item_Fat_Content` column
+- Performed Exploratory Analysis to understand the statistics and correlation of each feature to the target
+- Performed Explanatory Analysis to show the relationship between `Item_MRP` and `Item_Outlet_Sales`
 
 ### Results
 
