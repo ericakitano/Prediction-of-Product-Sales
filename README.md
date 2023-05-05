@@ -38,7 +38,7 @@ Supermarket Type1 has the highest count.
 ### Model
 #### 1. Decision Tree Model 
 
-- Evaluation using Metrics: 
+- Evaluation: 
  > Decision Tree Test Scores
  > - Mean Average Error: 738.3556 
  > - Root Measn Squared Error: 1,057.4441 
@@ -50,7 +50,7 @@ Supermarket Type1 has the highest count.
 
 #### 2. Random Forest Model
 
-- Evaluation using Metrics: 
+- Evaluation: 
  > Random Forest Test Scores
  > - Mean Average Error: 728.2810 
  > - Root Measn Squared Error: 1,046.6086 
