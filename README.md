@@ -39,7 +39,7 @@ Supermarket Type1 has the highest count.
 #### 1. Decision Tree Model 
 
 - Evaluation using Metrics: 
- > - Decision Tree Regression Test Scores
+ > Decision Tree Regression Test Scores
  > - Mean Average Error: 738.3556 
  > - Root Measn Squared Error: 1,057.4441 
 
