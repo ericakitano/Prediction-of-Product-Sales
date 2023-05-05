@@ -36,18 +36,32 @@ There is a positive correlation between `Item_MRP` and `Item_Outlet_Sales`.
 Supermarket Type1 has the highest count.
 
 ### Model
-- Decision Tree Model (TBD)
+1. Decision Tree Model 
 
-- Evaluation using Metrics
+- Evaluation using Metrics: 
+ Decision Tree Regression Test Scores
+ Mean Average Error: 738.3556 
+ Root Measn Squared Error: 1,057.4441 
 
 - Analysis: 
-    -  Based on the metrics, the Optimized Decision Tree Model has the lowest MAE of 738 and RMSE of 1057. The difference between RMSE and MAE implies that the model is making some larger errors as well.
-    - Since the average value of Item_Outlet_Sales column is 2181 and the Mean Average Error on the Test data is about 738 for the optimized Decision Tree Regression model, the model is off by about 33.8 % on average. (TBD)
+    - Based on the metrics, the `Optimized Decision Tree Model` has the lower MAE of 738 and RMSE of 1057 compared to the `Linear Regression Model` which has higher MAE and RMSE. 
+    - The difference between RMSE and MAE in the `Optimized Decision Tree Model` implies that the model is making some larger errors as well.
+    - Since the average value of `Item_Outlet_Sales` column is **2181** and the Mean Average Error on the Test data is about **738** for the `optimized Decision Tree Regression model`, the model is off by about **33.8 %** on average.
 
-### Recommendations:
+2. Random Forest Model
+    
+Based on the overall metrics of all 4 models that were compared, the `Optimized Random Forest Tree Model` (max_depth=5, n_estimators=150) has the lowest MAE of **728** and RMSE of **1047** on the test data. The difference between RMSE and MAE implies that the model is making some larger errors as well.
+
+Since the average value of `Item_Outlet_Sales` column is **2181** and the Mean Average Error on the Test data is about **728** for the optimized Random Forest model, the model is off by about **33.4 %** on average.
+
+### Recommendations: 
+
+Based on the above explanation, `Decision Tree Model` or  `Random Forest Model` is recommended.
 
 
 ### Limitations & Next Steps
+
+For this set of data, even the best model (Optimized Random Forest Model) is underfit and have high bias. This can be explained from the observation that the features do not correlate well with the target and some values were imputed.
 
 ### For further information
 For any additional questions, please contact ekitano1@gmail.com
