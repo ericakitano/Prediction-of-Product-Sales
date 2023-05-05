@@ -39,14 +39,14 @@ Supermarket Type1 has the highest count.
 #### 1. Decision Tree Model 
 
 - Evaluation using Metrics: 
- > Decision Tree Regression Test Scores
+ > Decision Tree Test Scores
  > - Mean Average Error: 738.3556 
  > - Root Measn Squared Error: 1,057.4441 
 
 - Analysis: 
     - Based on the metrics, the `Optimized Decision Tree Model` has the lower MAE of 738 and RMSE of 1057 compared to the `Linear Regression Model` which has higher MAE and RMSE. 
     - The difference between RMSE and MAE in the `Optimized Decision Tree Model` implies that the model is making some larger errors as well.
-    - Since the average value of `Item_Outlet_Sales` column is **2181** and the Mean Average Error on the Test data is about **738** for the `optimized Decision Tree Regression model`, the model is off by about **33.8 %** on average.
+    - Since the average value of `Item_Outlet_Sales` column is **2181** and the Mean Average Error on the Test data is about **738** for the `Optimized Decision Tree model`, the model is off by about **33.8 %** on average.
 
 #### 2. Random Forest Model
     
