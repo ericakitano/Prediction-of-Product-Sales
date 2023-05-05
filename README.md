@@ -65,7 +65,7 @@ Supermarket Type1 has the highest count.
 Based on the evaluation, `Decision Tree Model` or  `Random Forest Model` is recommended.
 
 
-### Limitations & Next Steps
+### Limitations
 
 For this set of data, even the best model (Optimized Random Forest Model) is underfit and have high bias. This can be explained from the observation that the features do not correlate well with the target and some values were imputed.
 
