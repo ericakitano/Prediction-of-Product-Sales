@@ -56,7 +56,7 @@ Since the average value of `Item_Outlet_Sales` column is **2181** and the Mean A
 
 ### Recommendations: 
 
-Based on the above explanation, `Decision Tree Model` or  `Random Forest Model` is recommended.
+Based on the evaluation, `Decision Tree Model` or  `Random Forest Model` is recommended.
 
 
 ### Limitations & Next Steps
