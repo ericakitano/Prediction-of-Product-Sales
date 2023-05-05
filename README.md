@@ -36,7 +36,7 @@ There is a positive correlation between `Item_MRP` and `Item_Outlet_Sales`.
 Supermarket Type1 has the highest count.
 
 ### Model
-1. Decision Tree Model 
+####1. Decision Tree Model 
 
 - Evaluation using Metrics: 
  Decision Tree Regression Test Scores
@@ -48,7 +48,7 @@ Supermarket Type1 has the highest count.
     - The difference between RMSE and MAE in the `Optimized Decision Tree Model` implies that the model is making some larger errors as well.
     - Since the average value of `Item_Outlet_Sales` column is **2181** and the Mean Average Error on the Test data is about **738** for the `optimized Decision Tree Regression model`, the model is off by about **33.8 %** on average.
 
-2. Random Forest Model
+####2. Random Forest Model
     
 Based on the overall metrics of all 4 models that were compared, the `Optimized Random Forest Tree Model` (max_depth=5, n_estimators=150) has the lowest MAE of **728** and RMSE of **1047** on the test data. The difference between RMSE and MAE implies that the model is making some larger errors as well.
 
