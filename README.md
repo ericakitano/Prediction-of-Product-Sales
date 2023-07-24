@@ -41,8 +41,9 @@ Supermarket Type1 has the highest count.
 
 - Coefficient Plot
 
-> <img src="images/linear_regression_top3_coefficients.png">
-
+<div align="center">
+<img src="images/linear_regression_top3_coefficients.png">
+</div>
 
 > The top 3 most impactful features are:
 >
@@ -78,7 +79,9 @@ Supermarket Type1 has the highest count.
     
 - Feature Importances Plot
 
-> <img src="images/tuned_random_forest_top5_important_features.png">
+<div align="center">
+<img src="images/tuned_random_forest_top5_important_features.png">
+</div>
 
 The top 5 most important features are:
     
