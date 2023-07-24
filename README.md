@@ -41,9 +41,9 @@ Supermarket Type1 has the highest count.
 
 - Coefficient Plot
 
-<img src="images/linear_regression_top3_coefficients.png" width=60%>
+<img src="images/linear_regression_top3_coefficients.png">
 
-
+```
 The top 3 most impactful features are:
 
 1. Outlet_Type_Supermarket Type3:
@@ -62,7 +62,7 @@ The top 3 most impactful features are:
 
  - This feature has a **negative** influence on the target (Item_Outlet_Sales) with a coefficient of -1607.68.
  - Since this is a One-Hot-Encoded Categorical feature, it means that if the item belongs to this category, the Item_Outlet_Sales will be **decreased** by **1607.68** rupees.
-
+```
 
 #### 2. Tuned Random Forest Model
 
@@ -78,7 +78,7 @@ The top 3 most impactful features are:
     
 - Feature Importances Plot
 
-<img src="images/tuned_random_forest_top5_important_features.png" width=60%>
+<img src="images/tuned_random_forest_top5_important_features.png">
 
 The top 5 most important features are:
     
