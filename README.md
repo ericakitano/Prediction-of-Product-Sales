@@ -41,8 +41,9 @@ Supermarket Type1 has the highest count.
 
 - Coefficient Plot
 
+<div align="center">
 <img src="images/linear_regression_top3_coefficients.png">
-
+</div>
 
 > The top 3 most impactful features are:
 >
