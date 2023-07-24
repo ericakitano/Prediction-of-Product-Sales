@@ -41,28 +41,28 @@ Supermarket Type1 has the highest count.
 
 - Coefficient Plot
 
-<img src="images/linear_regression_top3_coefficients.png">
-
-```
-The top 3 most impactful features are:
-
-1. Outlet_Type_Supermarket Type3:
-
-  - This feature has a **positive** influence on the target (Item_Outlet_Sales) with a coefficient of 1524.25. 
-  - Since this is a One-Hot-Encoded Categorical feature, it means that if the item belongs to this category, the Item_Outlet_Sales will be **increased** by **1524.25** rupees. 
-  
-
-2. Item_Visibility:
-    
- - This feature has a **negative** influence on the target (Item_Outlet_Sales) with a coefficient of -425.37.  
- - Since this is a scaled numeric feature, it means that when I increase the value for this feature by 1 standard deviation, the Item_Outlet_Sales will be **decreased** by **425.37** rupees.
+> <img src="images/linear_regression_top3_coefficients.png">
 
 
-3. Outlet_Type_Grocery Store:
+> The top 3 most impactful features are:
+>
+> 1. Outlet_Type_Supermarket Type3:
+>
+>  - This feature has a **positive** influence on the target (Item_Outlet_Sales) with a coefficient of 1524.25. 
+>  - Since this is a One-Hot-Encoded Categorical feature, it means that if the item belongs to this category, the >Item_Outlet_Sales will be **increased** by **1524.25** rupees. 
+> 
+>
+>2. Item_Visibility:
+>    
+> - This feature has a **negative** influence on the target (Item_Outlet_Sales) with a coefficient of -425.37.  
+> - Since this is a scaled numeric feature, it means that when I increase the value for this feature by 1 standard deviation, >the Item_Outlet_Sales will be **decreased** by **425.37** rupees.
+>
+>
+>3. Outlet_Type_Grocery Store:
+>
+> - This feature has a **negative** influence on the target (Item_Outlet_Sales) with a coefficient of -1607.68.
+> - Since this is a One-Hot-Encoded Categorical feature, it means that if the item belongs to this category, the >Item_Outlet_Sales will be **decreased** by **1607.68** rupees.
 
- - This feature has a **negative** influence on the target (Item_Outlet_Sales) with a coefficient of -1607.68.
- - Since this is a One-Hot-Encoded Categorical feature, it means that if the item belongs to this category, the Item_Outlet_Sales will be **decreased** by **1607.68** rupees.
-```
 
 #### 2. Tuned Random Forest Model
 
@@ -78,7 +78,7 @@ The top 3 most impactful features are:
     
 - Feature Importances Plot
 
-<img src="images/tuned_random_forest_top5_important_features.png">
+> <img src="images/tuned_random_forest_top5_important_features.png">
 
 The top 5 most important features are:
     
