@@ -36,19 +36,34 @@ There is a positive correlation between `Item_MRP` and `Item_Outlet_Sales`.
 Supermarket Type1 has the highest count.
 
 ### Model
-#### 1. Decision Tree Model 
 
-- Evaluation: 
- > Decision Tree Test Scores
- > - Mean Average Error: 738.3556 
- > - Root Measn Squared Error: 1,057.4441 
+#### 1. Linear Regression Model
 
-- Analysis: 
-    - Based on the metrics, the `Optimized Decision Tree Model` has the lower MAE of 738 and RMSE of 1057 compared to the `Linear Regression Model` which has higher MAE and RMSE. 
-    - The difference between RMSE and MAE in the `Optimized Decision Tree Model` implies that the model is making some larger errors as well.
-    - Since the average value of `Item_Outlet_Sales` column is **2181** and the Mean Average Error on the Test data is about **738** for the `Optimized Decision Tree model`, the model is off by about **33.8 %** on average.
+- Coefficient Plot
 
-#### 2. Random Forest Model
+![PNG]('images/linear_regression_top3_coefficients.png')
+
+The top 3 most impactful features are:
+
+1. Outlet_Type_Supermarket Type3:
+
+  - This feature has a **positive** influence on the target (Item_Outlet_Sales) with a coefficient of 1524.25. 
+  - Since this is a One-Hot-Encoded Categorical feature, it means that if the item belongs to this category, the Item_Outlet_Sales will be **increased** by **1524.25** rupees. 
+  
+
+2. Item_Visibility:
+    
+ - This feature has a **negative** influence on the target (Item_Outlet_Sales) with a coefficient of -425.37.  
+ - Since this is a scaled numeric feature, it means that when I increase the value for this feature by 1 standard deviation, the Item_Outlet_Sales will be **decreased** by **425.37** rupees.
+
+
+3. Outlet_Type_Grocery Store:
+
+ - This feature has a **negative** influence on the target (Item_Outlet_Sales) with a coefficient of -1607.68.
+ - Since this is a One-Hot-Encoded Categorical feature, it means that if the item belongs to this category, the Item_Outlet_Sales will be **decreased** by **1607.68** rupees.
+
+
+#### 2. Tuned Random Forest Model
 
 - Evaluation: 
  > Random Forest Test Scores
@@ -59,10 +74,22 @@ Supermarket Type1 has the highest count.
     - Based on the overall metrics of all 4 models that were compared, the `Optimized Random Forest Tree Model` (max_depth=5, n_estimators=150) has the lowest MAE of **728** and RMSE of **1047** on the test data. 
     - The difference between RMSE and MAE implies that the model is making some larger errors as well.
     - Since the average value of `Item_Outlet_Sales` column is **2181** and the Mean Average Error on the Test data is about **728** for the optimized Random Forest model, the model is off by about **33.4 %** on average.
+    
+- Feature Importances Plot
+
+![PNG]('images/tuned_random_forest_top5_important_features.png')
+
+The top 5 most important features are:
+    
+    - Item_MRP
+    - Outlet_Type_Grocery Store
+    - Outlet_Type_Supermarket Type3
+    - Item_Visibility
+    - Outlet_Type_Supermarket Type1
 
 ### Recommendations: 
 
-Based on the evaluation, `Decision Tree Model` or  `Random Forest Model` is recommended.
+Based on the evaluation,`Random Forest Model` is recommended.
 
 
 ### Limitations
