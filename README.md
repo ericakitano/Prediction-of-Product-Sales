@@ -90,7 +90,48 @@ Supermarket Type1 has the highest count.
     - Outlet_Type_Supermarket Type3
     - Item_Visibility
     - Outlet_Type_Supermarket Type1
+    
+- **SHAP summary plot - bar version**
 
+<div align="center">
+<img src="images/part2_shap_summary_plot_bar.png">
+</div>
+
+**COMPARISON**: 
+- **The top 5 most important features are the same between `SHAP` and Random Forest built-in `feature_importances_`**. 
+  - The top 3 features are exactly in the same order for both methods. 
+  - The order was swapped for the 4th and 5th feature when I compared SHAP and Random Forest feature_importances_.
+  
+- **SHAP summary plot - dot version**
+
+<div align="center">
+<img src="images/part2_shap_summary_plot_dot.png">
+</div>
+
+**The top 3 most important features are**:
+
+1. `Item_MRP`
+2. `Outlet_Type_Grocery Store`
+3. `Outlet_Type_Supermarket Type3`
+
+**Interpretation**:
+- `Item_MRP` 
+   - This feature has the largest effect on the model's predictions as it was the first bar at the top of the plot.
+   - Since the **red dots are on the positive side**, it means that the higher the Item_MRP, the more likely the model would predict that outlet sales is high.
+
+- `Outlet_Type_Grocery Store`
+   - This is a One-Hot-Encoded feature.
+   - Since the **red dots are on the negative side**, it means that it is less likely that the model will predict high outlet sales if Outlet Type is Outlet_Type_Grocery Store.
+   - If Outlet_Type_Grocery Store == 1, the model is less likely to predict high outlet sales.
+   - If Outlet_Type_Grocery Store == 0, the model is more likely to predict high outlet sales.
+   
+- `Outlet_Type_Supermarket Type3`
+   - This is a One-Hot-Encoded feature.
+   - Since the **red dots are on the positive side**, it means that if the item is sold at Outlet_Type_Supermarket Type3, it is more likely that the model will predict the item to have high outlet sales. 
+   - If Outlet_Type_Supermarket Type3 == 1, the model is more likely to predict high outlet sales.
+   - If Outlet_Type_Supermarket Type3 == 0, the model is less likely to predict high outlet sales.
+   
+   
 ### Recommendations: 
 
 Based on the evaluation,`Random Forest Model` is recommended.
