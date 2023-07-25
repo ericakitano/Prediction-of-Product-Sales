@@ -131,7 +131,85 @@ Supermarket Type1 has the highest count.
    - If Outlet_Type_Supermarket Type3 == 1, the model is more likely to predict high outlet sales.
    - If Outlet_Type_Supermarket Type3 == 0, the model is less likely to predict high outlet sales.
    
-   
+
+### Individual Examples:
+
+I selected a row that had the lowest value in the target column and a row that had the highest value in the target column.
+
+- Store that had the item with lowest sales had Outlet_Type of `Grocery Store`.
+- Store that had the item with highest sales (within the 400 samples of SHAP) had Outlet_Type of `Supermarket Type1`.
+
+#### LIME tabular explanation
+
+- **Highest Sale in 400 samples**
+
+<div align="center">
+<img src="images/high_lime.png">
+</div>
+
+
+**Interpretation**:
+    
+1. As we can see from above, an example item from Supermarket Type 1 group had a high predicted outlet sales value of **4085.11**.
+
+2. Item_MRP being > 183.59 had a positive impact on the outlet sales. 
+
+3. Not being an `Outlet_Type_Grocery Store` (Value == 0) had a positive impact on the outlet sales.
+
+4. Not being an `Outlet_Type_Supermarket Type3` (Value == 0) had a negative impact on the outlet sales.
+
+- **Lowest Sale in 400 samples**
+
+<div align="center">
+<img src="images/low_lime.png">
+</div>
+
+
+**Interpretation**:
+    
+1. As we can see from above, an example item from Grocery Store group had a low predicted outlet sales value of **101.82**.
+
+2. Item_MRP being <=99.43 had a negative impact on the outlet sales. 
+
+3. Being an `Outlet_Type_Grocery Store` (Value == 1) had an negative impact on the outlet sales.
+
+4. Not being an `Outlet_Type_Supermarket Type3` (Value == 0) had a negative impact on the outlet sales.
+
+#### Force Plot
+
+- **Highest Sale in 400 samples**
+
+<div align="center">
+<img src="images/high_force_plot.png">
+</div>
+
+
+**Interpretation**:
+    
+- Base value = 2211
+- SHAP value = 4085.11
+- The contributions of the red features are greater than the blue, which means there is a greater "push" towards **higher** outlet sales, so the final prediction is high outlet sales.
+- The wider the segment is for the feature, the greater its contribution to the prediction is.
+  - Therefore, in this case, Item_MRP is the biggest factor, followed by **not** being an Outlet_Type_Grocery Store.
+  - The factor that is pushing the outlet sales to lower direction is that it is **not** an Outlet_Type_Supermarket Type3.
+
+
+- **Lowest Sale in 400 samples**
+
+<div align="center">
+<img src="images/low_force_plot.png">
+</div>
+
+
+**Interpretation**:
+
+- Base value = 2211
+- SHAP value = 101.82
+- The contributions of the blue features are much greater than the red which means a greater "push" towards **lower** outlet sales, so the final prediction is low outlet sales.
+- The wider the segment is for the feature, the greater its contribution to the prediction is.
+  - Therefore, in this case, the low Item_MRP value and the fact that it is an Outlet_Type_Grocery Store are contributing largely to the low predicted value.
+    
+
 ### Recommendations: 
 
 Based on the evaluation,`Random Forest Model` is recommended.
